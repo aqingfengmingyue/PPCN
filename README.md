@@ -1,2 +1,2 @@
 # PPCN
-The code of PPCN algorithlm
+The code and data of PPCN algorithlm used.
