@@ -238,7 +238,7 @@ def contribution_matrix(graph: nx.Graph, belta: float, distance=3) -> float:
     return C
 
 
-def valid_degree_promotion(graph: nx.Graph, belta: float, propagated_distance=3):
+def ppcn(graph: nx.Graph, belta: float, propagated_distance=3):
     """
     计算提升后的所有节点的有效度，考虑通信矩阵
     返回值：dict['node', 'value']
@@ -251,5 +251,6 @@ def valid_degree_promotion(graph: nx.Graph, belta: float, propagated_distance=3)
         valid_degree_centrality[node] = round(np.sum(C[i, :]), 2)  # 节点node对应的索引i的行之和即是节点node的最终有效度
 
     return valid_degree_centrality
+
 
 
